@@ -1,0 +1,83 @@
+{
+  "/__docusaurus/debug-0ad": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-2-f-4-45e"
+    }
+  },
+  "/__docusaurus/debug/config-460": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-2-f-4-45e"
+    }
+  },
+  "/__docusaurus/debug/content-d8b": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-2-f-4-45e"
+    },
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-095": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-2-f-4-45e"
+    }
+  },
+  "/__docusaurus/debug/metadata-57a": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-2-f-4-45e"
+    }
+  },
+  "/__docusaurus/debug/registry-24e": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-2-f-4-45e"
+    }
+  },
+  "/__docusaurus/debug/routes-ce7": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-2-f-4-45e"
+    }
+  },
+  "/docs-4fe": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---docs-132-fff"
+    },
+    "versionMetadata": "versionMetadata---docs-935-398"
+  },
+  "/docs/category/usage-26f": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-usagee-53-908"
+  },
+  "/docs/introduction-20e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-introduction-972-0fc"
+  },
+  "/docs/setup-dd7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-setup-617-593"
+  },
+  "/docs/Usage/containers-4f2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-usage-containersc-48-2c2"
+  },
+  "/docs/Usage/first_steps-4ad": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-usage-first-stepsb-92-8e7"
+  },
+  "/docs/Usage/modules-168": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-usage-modules-856-ba8"
+  },
+  "/-50e": {
+    "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
+    "__context": {
+      "plugin": "plugin---eb-7-8f9"
+    },
+    "config": "config---5-e-9-4f3"
+  }
+}

@@ -1,0 +1,110 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #25a2c1;
+  --ifm-color-primary-dark: #2192ae;
+  --ifm-color-primary-darker: #1f8aa4;
+  --ifm-color-primary-darkest: #1a7187;
+  --ifm-color-primary-light: #29b2d4;
+  --ifm-color-primary-lighter: #31b6d8;
+  --ifm-color-primary-lightest: #4ec1dd;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25a2c1;
+  --ifm-color-primary-dark: #2192ae;
+  --ifm-color-primary-darker: #1f8aa4;
+  --ifm-color-primary-darkest: #1a7187;
+  --ifm-color-primary-light: #29b2d4;
+  --ifm-color-primary-lighter: #31b6d8;
+  --ifm-color-primary-lightest: #4ec1dd;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.code-block-error-line {
+  background-color: #ff000020;
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  border-left: 3px solid #ff000080;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-box {
+  width: 100%;
+  height: 256px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-box h2 {
+  font-size: 24px;
+  color: white;
+}
+
+.headline {
+  font-size: 64px;
+}
+
+.get-started-box {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.get-started-box h1 {
+  text-align: left;
+}
+
+.get-started-links {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  justify-content:start;
+}
+
+.get-started-links a {
+  background-color: #12c2e9;
+  color: black;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.github-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 64px;
+}
+
+@media screen and (min-width: 1000px) {
+  .get-started-box {
+    width: 1000px;
+  } 
+}
+
+.gradient-text {
+  background-image: linear-gradient(60deg, #12c2e9, #f64f59);
+  background-clip: text;
+  color: transparent;
+}
+
+.color-text {
+  color: #25a2c1;
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Usage/DSL",
+  "id": "Usage/DSL",
+  "title": "DSL",
+  "description": "Using the DSL provided by Syringe",
+  "source": "@site/docs/Usage/DSL.mdx",
+  "sourceDirName": "Usage",
+  "slug": "/Usage/DSL",
+  "permalink": "/docs/Usage/DSL",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Usage/DSL.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_class_name": "green",
+    "description": "Using the DSL provided by Syringe"
+  },
+  "sidebar": "DocumentationSidebar",
+  "previous": {
+    "title": "Modules",
+    "permalink": "/docs/Usage/modules"
+  },
+  "next": {
+    "title": "Application",
+    "permalink": "/docs/Usage/application"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
+          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs",
+          "editUrlLocalized": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/i18n/en/docusaurus-plugin-content-docs/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/Users/marcelkulina/Documents/Projects/SyringeDocs/syringe/sidebars.js",
+          "contentPath": "/Users/marcelkulina/Documents/Projects/SyringeDocs/syringe/docs",
+          "contentPathLocalized": "/Users/marcelkulina/Documents/Projects/SyringeDocs/syringe/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "unversionedId": "introduction",
+              "id": "introduction",
+              "title": "Introduction",
+              "description": "Syringe is a lightweight dependency(DI) framework written in Swift. It aims to provide an intuitive and non-invasive way to realise Inversion of Control(IoC) in applications written in Swift.",
+              "source": "@site/docs/introduction.mdx",
+              "sourceDirName": ".",
+              "slug": "/introduction",
+              "permalink": "/docs/introduction",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/introduction.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "DocumentationSidebar",
+              "next": {
+                "title": "Setup",
+                "permalink": "/docs/setup"
+              }
+            },
+            {
+              "unversionedId": "setup",
+              "id": "setup",
+              "title": "Setup",
+              "description": "Syringe is available via the Swift Package Manager.",
+              "source": "@site/docs/setup.mdx",
+              "sourceDirName": ".",
+              "slug": "/setup",
+              "permalink": "/docs/setup",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/setup.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "DocumentationSidebar",
+              "previous": {
+                "title": "Introduction",
+                "permalink": "/docs/introduction"
+              },
+              "next": {
+                "title": "Usage",
+                "permalink": "/docs/category/usage"
+              }
+            },
+            {
+              "unversionedId": "Usage/containers",
+              "id": "Usage/containers",
+              "title": "Containers",
+              "description": "Creating and managing syringe instances",
+              "source": "@site/docs/Usage/containers.mdx",
+              "sourceDirName": "Usage",
+              "slug": "/Usage/containers",
+              "permalink": "/docs/Usage/containers",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Usage/containers.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2,
+                "description": "Creating and managing syringe instances"
+              },
+              "sidebar": "DocumentationSidebar",
+              "previous": {
+                "title": "Getting Started",
+                "permalink": "/docs/Usage/first_steps"
+              },
+              "next": {
+                "title": "Modules",
+                "permalink": "/docs/Usage/modules"
+              }
+            },
+            {
+              "unversionedId": "Usage/first_steps",
+              "id": "Usage/first_steps",
+              "title": "Getting Started",
+              "description": "Getting started with Syringe",
+              "source": "@site/docs/Usage/first_steps.mdx",
+              "sourceDirName": "Usage",
+              "slug": "/Usage/first_steps",
+              "permalink": "/docs/Usage/first_steps",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Usage/first_steps.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1,
+                "title": "Getting Started",
+                "description": "Getting started with Syringe"
+              },
+              "sidebar": "DocumentationSidebar",
+              "previous": {
+                "title": "Usage",
+                "permalink": "/docs/category/usage"
+              },
+              "next": {
+                "title": "Containers",
+                "permalink": "/docs/Usage/containers"
+              }
+            },
+            {
+              "unversionedId": "Usage/modules",
+              "id": "Usage/modules",
+              "title": "Modules",
+              "description": "Registering and resolving dependencies",
+              "source": "@site/docs/Usage/modules.mdx",
+              "sourceDirName": "Usage",
+              "slug": "/Usage/modules",
+              "permalink": "/docs/Usage/modules",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Usage/modules.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2,
+                "title": "Modules",
+                "description": "Registering and resolving dependencies"
+              },
+              "sidebar": "DocumentationSidebar",
+              "previous": {
+                "title": "Containers",
+                "permalink": "/docs/Usage/containers"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "DocumentationSidebar": [
+              {
+                "type": "doc",
+                "id": "introduction"
+              },
+              {
+                "type": "doc",
+                "id": "setup"
+              },
+              {
+                "type": "category",
+                "label": "Usage",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Usage/first_steps"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Usage/containers"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Usage/modules"
+                  }
+                ],
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/usage",
+                  "permalink": "/docs/category/usage"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [],
+      "blogListPaginated": [],
+      "blogTags": {},
+      "blogTagsListPath": "/blog/tags",
+      "blogTagsPaginated": []
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.tsx"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Core",
+  "slug": "/category/core",
+  "permalink": "/docs/category/core",
+  "navigation": {
+    "previous": {
+      "title": "Setup",
+      "permalink": "/docs/setup"
+    },
+    "next": {
+      "title": "DSL",
+      "permalink": "/docs/Usage/DSL"
+    }
+  }
+}

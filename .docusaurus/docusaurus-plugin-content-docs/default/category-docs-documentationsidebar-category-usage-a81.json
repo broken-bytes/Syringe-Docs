@@ -1,0 +1,15 @@
+{
+  "title": "Usage",
+  "slug": "/category/usage",
+  "permalink": "/docs/category/usage",
+  "navigation": {
+    "previous": {
+      "title": "Setup",
+      "permalink": "/docs/setup"
+    },
+    "next": {
+      "title": "Getting Started",
+      "permalink": "/docs/Usage/first_steps"
+    }
+  }
+}

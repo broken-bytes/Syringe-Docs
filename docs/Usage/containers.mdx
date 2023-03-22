@@ -1,0 +1,62 @@
+---
+sidebar_position: 2
+description: Creating and managing syringe instances
+---
+# Containers
+Syringe introduces an intuitive container DSL that makes container management a no-brainer.
+
+The following functions are part of the application DSL:
+- `injectSyringe { }` - Creates a global scope `Container`
+- `syringeContainer { }` - Creates a local scope `Container`
+- `modules { }` - Starts the module list for the enclosing `Container`
+- `logger { }` - Binds a custom logger function to the log output of this container
+
+Using the global scope initialiser allows the use of the free function DSL. Otherwise every operation needs to happen on a certain `Container`. 
+
+Usually, using the global scope is the preferred *and* simpler way.
+
+:::success 
+
+Both variant are identical in functionality. The global scope is for DSL convenience only.
+
+:::
+
+## Creating a Container
+
+Containers can be created via the container DSL functions:
+
+```swift title="main.swift"
+// Global
+injectSyringe {
+    modules {
+        // Modules go here
+    }
+}
+
+// Local
+let localApp = syringeContainer {
+    modules {
+        // Modules go here
+    }
+}
+```
+
+## Customising the Container
+It is possible to customise the container to one's needs. The container DSL offers a number of additional parameters for customisation.
+
+### Adding a custom Logger
+Every container can be passed a custom logger which receives logs from Syringe:
+
+```swift title="main.swift"
+// Global
+injectSyringe {
+    // highlight-start
+    logger { 
+        print("Level: \($0) Message: \($1)")
+    }
+    // highlight-end
+    modules {
+        // Modules go here
+    }
+}
+```
