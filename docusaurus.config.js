@@ -14,7 +14,7 @@ const config = {
   url: 'https://broken-bytes.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Syringe/',
   trailingSlash: false,
 
   // GitHub pages deployment config.
