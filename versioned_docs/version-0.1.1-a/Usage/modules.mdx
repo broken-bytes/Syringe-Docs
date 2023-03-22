@@ -1,0 +1,213 @@
+---
+sidebar_position: 2
+title: Modules
+description: Registering and resolving dependencies
+---
+# Modules
+Syringe introduces an intuitive module DSL that makes dependency management a breeze.
+
+The following functions are part of the module DSL:
+- `factory { }` - Provides a factory that returns a new instance on every resolve
+- `singleton { //definition }` - Provides an instance that is retained once it is created
+- `get()` - Resolves a previously registered dependency. May be used with any number of parameters.
+
+## Creating a Module
+Let's create a new module
+
+```swift
+let yourModule = module {
+    // Dependencies go here
+}
+```
+
+Let's add a singleton of type `Service` to our module:
+```swift
+class Service {
+    ...
+}
+
+let yourModule = module {
+    // highlight-start
+    singleton { Service() }
+    // highlight-end
+}
+```
+
+Note that the same syntax applies to factories:
+```swift
+let yourModule = module {
+    singleton { Service() }
+    // highlight-start
+    factory { Int.random(0..<5) }
+    // highlight-end
+}
+```
+
+## Resolving Dependencies
+
+The dependencies can now be resolved:
+```swift
+class View {
+    // highlight-start
+    let service: Service = get()
+    // highlight-end
+}
+```
+
+Dependencies may also resolve other dependencies inside of the module:
+```swift
+class User {
+    ...
+}
+
+class Service {
+    let user: User
+
+    init(user: User) {
+        self.user = user
+    }
+}
+
+let yourModule = module {
+    // highlight-start
+    singleton { Service(user: get()) }
+    // highlight-end
+    factory { User() }
+}
+```
+
+Resolved dependencies will be nil when not previously registered:
+```swift
+class Repository {
+    let storage: Storage
+
+    init(storage: Storage) {
+        self.storage = storage
+    }
+}
+
+let yourModule = module {
+    // error-next-line
+    singleton { Repository(storage: get()) }
+}
+```
+
+:::danger 
+
+Dependencies are Optional types. 
+
+If they are unfound the logger will print possible issues and the resolved dependency will be nil.
+
+:::
+
+### Passing Parameters
+
+It is also possible to pass parameters during resolve:
+```swift
+class Counter {
+    let value: Int 
+    
+    init(x: Int, y: Int) {
+        self.value = x + y
+    }
+}
+
+let yourModule = module {
+    // highlight-start
+    factory { Counter(x: $0, y: $1) }
+    // highlight-end
+}
+
+class View {
+    init() {
+        // highlight-start
+        var counter: Counter = get(1, 2)
+        // highlight-end
+    }
+}
+```
+
+:::caution Singletons 
+
+Passing parameters to singletons works only for the first time. Once singletons are created parameters are ignored on subsequent resolves.
+
+:::
+
+### Late-resolving
+Sometimes it is inevitable to have a circular dependency. Syringe allows you to break the circle and late-resolve certain dependencies:
+```swift
+public class Parent {
+    public let child: Child
+    
+    public init(child: Child) {
+        self.child = child
+    }
+}
+
+public class Child {
+    public var parent: Parent!
+    
+    init() {
+        
+    }
+}
+
+let testModule = module {
+    singleton { Parent(child: get()!) }
+    // highlight-start
+        .onInit {
+            // Only parameter is the target dependency as Any?
+            guard let parent: Parent = $0 as? Parent else { fatalError() }
+            let child: Child = get()!
+            child.parent = parent
+        }
+    // highlight-end
+    singleton { Child() }
+}
+
+injectSyringe {
+    modules {
+        testModule
+    }
+}
+```
+
+## Making use of Polymorphism
+
+Sometimes you want your dependency to be the base type of something, while the returned object is a specialisation of that. Syringe allows that via regular Swift typecasts.
+
+```swift
+protocol Repository {
+    func load()
+}
+
+class RepoImpl: Repository {
+    func load() {
+        ...
+    }
+}
+
+class RepoMock: Repository {
+    func load() {
+        ...
+    }
+}
+
+let yourModule = module {
+    // Use mock for testing
+    #if TESTING
+    singleton { RepoMock() as Repository }
+    // Use live for anything else
+    #else
+    singleton { RepoImpl() as Repository }
+    #endif
+}
+
+class View {
+    let repo: Repository = get()
+
+    init() {
+        repo.load()
+    }
+}
+```
