@@ -44,6 +44,14 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Canary 🚧',
+              path: ''
+            }
+          },
+          includeCurrentVersion: true
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -72,11 +80,17 @@ const config = {
             label: 'Documentation',
           },
           {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: true,
+          },
+          {
             href: 'https://github.com/broken-bytes/syringe',
             label: 'GitHub',
             position: 'right',
           },
         ],
+        
       },
       footer: {
         style: 'dark',
